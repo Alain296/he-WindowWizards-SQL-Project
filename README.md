@@ -112,6 +112,4 @@ JOIN
 ORDER BY 
     t.transaction_date;
 ```
-
-
-![Alt text](
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20LAG()%20to%20compare%20current%20transaction%20amount%20with%20previous%20transaction%20.png)
