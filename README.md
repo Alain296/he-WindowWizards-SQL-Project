@@ -76,7 +76,7 @@ CREATE TABLE transactions (
 );
 ``` 
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Transaction%20table.png)
-```
+```sql
 -- Insert transaction data (sample entries shown)
 INSERT INTO transactions (transaction_id, product_id, region_id, transaction_date, quantity, total_amount) VALUES (1, 1, 1, TO_DATE('2024-01-15', 'YYYY-MM-DD'), 5, 4499.95);
 INSERT INTO transactions (transaction_id, product_id, region_id, transaction_date, quantity, total_amount) VALUES (2, 2, 1, TO_DATE('2024-01-16', 'YYYY-MM-DD'), 3, 3899.97);
