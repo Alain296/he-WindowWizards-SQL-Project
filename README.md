@@ -192,3 +192,4 @@ WHERE
 ORDER BY 
     region_name, transaction_date;
 ```
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Finding%20the%20Earliest%20Records.png)
