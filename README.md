@@ -38,3 +38,14 @@ INSERT INTO products (product_id, product_name, category, price) VALUES (9, 'Pro
 INSERT INTO products (product_id, product_name, category, price) VALUES (10, 'Gaming Console', 'Electronics', 499.99);
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Insert%20sample%20data%20-%20Products%20.png)
+### Regions Table
+This table lists geographical regions where transactions occur.
+
+```sql
+-- Create Regions table
+CREATE TABLE regions (
+    region_id INT PRIMARY KEY,
+    region_name VARCHAR(50)
+);
+![Alt text](image-url)
+
