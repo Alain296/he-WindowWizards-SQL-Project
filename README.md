@@ -74,3 +74,5 @@ CREATE TABLE transactions (
     FOREIGN KEY (product_id) REFERENCES products(product_id),
     FOREIGN KEY (region_id) REFERENCES regions(region_id)
 );
+``` 
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Transaction%20table.png)
