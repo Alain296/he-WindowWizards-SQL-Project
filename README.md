@@ -35,6 +35,7 @@ INSERT INTO products (product_id, product_name, category, price) VALUES (6, 'Sma
 INSERT INTO products (product_id, product_name, category, price) VALUES (7, 'Running Shoes', 'Sports', 89.99);
 INSERT INTO products (product_id, product_name, category, price) VALUES (8, 'Yoga Mat', 'Sports', 29.99);
 INSERT INTO products (product_id, product_name, category, price) VALUES (9, 'Protein Powder', 'Health', 39.99);
+
 INSERT INTO products (product_id, product_name, category, price) VALUES (10, 'Gaming Console', 'Electronics', 499.99);
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Insert%20sample%20data%20-%20Products%20.png)
@@ -50,4 +51,11 @@ CREATE TABLE regions (
 ``` 
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20REGION%20table.png)
 
+-- Insert regions data
+INSERT INTO regions (region_id, region_name) VALUES (1, 'North America');
+INSERT INTO regions (region_id, region_name) VALUES (2, 'Europe');
+INSERT INTO regions (region_id, region_name) VALUES (3, 'Asia');
+INSERT INTO regions (region_id, region_name) VALUES (4, 'South America');
+INSERT INTO regions (region_id, region_name) VALUES (5, 'Africa');
+```
 
