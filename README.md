@@ -259,3 +259,28 @@ ORDER BY
    - Patient readmission pattern analysis
    - Treatment outcome comparisons
    - Resource utilization optimization
+
+
+## Setup Instructions
+
+1. Create a database in your preferred SQL environment
+2. Run the table creation scripts:
+   ```sql
+   CREATE TABLE products (...)
+   CREATE TABLE regions (...)
+   CREATE TABLE transactions (...)
+   ```
+
+3. Run the data insertion scripts:
+   ```sql
+   INSERT INTO products (product_id, product_name, category, price) VALUES (...);
+   INSERT INTO regions (region_id, region_name) VALUES (...);
+   INSERT INTO transactions (transaction_id, product_id, region_id, transaction_date, quantity, total_amount) VALUES (...);
+   ```
+
+4. Execute each of the window function queries to see the results
+
+## Conclusion
+
+SQL Window Functions provide powerful analytical capabilities without the complexity of self-joins or complex subqueries. They allow for sophisticated data analysis while maintaining the granularity of the original data. Through this project, we've demonstrated how these functions can be applied to derive meaningful business insights from transactional data.
+
