@@ -22,3 +22,18 @@ CREATE TABLE products (
 );
 ``` 
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Product%20table%20.png)
+```sql
+
+
+-- Insert sample products
+INSERT INTO products (product_id, product_name, category, price) VALUES (1, 'Smartphone X', 'Electronics', 899.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (2, 'Laptop Pro', 'Electronics', 1299.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (3, 'Coffee Maker', 'Home Appliances', 129.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (4, 'Wireless Headphones', 'Electronics', 199.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (5, 'Blender', 'Home Appliances', 79.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (6, 'Smart Watch', 'Electronics', 349.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (7, 'Running Shoes', 'Sports', 89.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (8, 'Yoga Mat', 'Sports', 29.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (9, 'Protein Powder', 'Health', 39.99);
+INSERT INTO products (product_id, product_name, category, price) VALUES (10, 'Gaming Console', 'Electronics', 499.99);
+```
