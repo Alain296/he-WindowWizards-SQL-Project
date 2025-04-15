@@ -113,6 +113,11 @@ ORDER BY
     t.transaction_date;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20LAG()%20to%20compare%20current%20transaction%20amount%20with%20previous%20transaction%20.png)
+### 2. Ranking Data within a Category (RANK/DENSE_RANK)
+
+**Query Purpose**: Ranks products by total sales within each product category, showing both RANK() and DENSE_RANK() for comparison.
+
+**SQL Query:**
 ```sql
 SELECT 
     p.category,
@@ -164,7 +169,11 @@ ORDER BY
     region_name, sales_rank;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20%20Finding%20top%203%20best-selling%20products%20per%20region.png)
+### 4. Finding the Earliest Records
 
+**Query Purpose**: Retrieves the first 2 transactions for each region based on transaction date.
+
+**SQL Query:**
 ```sql
 WITH earliest_transactions AS (
     SELECT 
