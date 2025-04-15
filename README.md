@@ -163,3 +163,4 @@ WHERE
 ORDER BY 
     region_name, sales_rank;
 ```
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20%20Finding%20top%203%20best-selling%20products%20per%20region.png)
