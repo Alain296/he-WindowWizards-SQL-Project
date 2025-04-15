@@ -87,7 +87,13 @@ INSERT INTO transactions (transaction_id, product_id, region_id, transaction_dat
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Inserting%20sample%20data%2CTransaction.png)
 
 ``
+## Window Functions Explored
 
+### 1. Compare Values with Previous or Next Records (LAG/LEAD)
+
+**Query Purpose**: This query compares each transaction amount with the previous transaction chronologically, providing instant visibility into sales trends over time.
+
+**SQL Query:**
 ```sql
 SELECT 
     t.transaction_id,
@@ -202,3 +208,27 @@ ORDER BY
     region_name, transaction_date;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Finding%20the%20Earliest%20Records.png)
+### 5. Aggregation with Window Functions
+
+**Query Purpose**: Calculates maximum transaction amounts at both region level and overall company level.
+
+**SQL Query:**
+```sql
+SELECT 
+    t.transaction_id,
+    r.region_name,
+    p.product_name,
+    t.total_amount,
+    MAX(t.total_amount) OVER (PARTITION BY r.region_name) AS max_transaction_in_region,
+    MAX(t.total_amount) OVER () AS max_transaction_overall,
+    t.total_amount / MAX(t.total_amount) OVER (PARTITION BY r.region_name) * 100 AS percentage_of_region_max,
+    t.total_amount / MAX(t.total_amount) OVER () * 100 AS percentage_of_overall_max
+FROM 
+    transactions t
+JOIN 
+    products p ON t.product_id = p.product_id
+JOIN 
+    regions r ON t.region_id = r.region_id
+ORDER BY 
+    r.region_name, t.total_amount DESC;
+```
