@@ -1,7 +1,7 @@
-# The-WindowWizards-SQL-Project 
+# The-ASSIGNMENNT-SQL-Project 
 ## Team Members
-- Byiringiro Bailly 26593
-- Alain Mugabo 26450
+- BYIRINGIRO BAILLY 26593
+- ALAIN MUGABO       26450
 
 ## Project Overview
 This project explores SQL Window Functions using an e-commerce dataset. We've designed a dataset that tracks product transactions across different regions to demonstrate various analytical capabilities of window functions.
