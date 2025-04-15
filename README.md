@@ -21,4 +21,4 @@ CREATE TABLE products (
     price DECIMAL(10, 2)
 );
 ``` 
-!(Screenshot Product table .png) 
+!(https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Product%20table%20.png) 
