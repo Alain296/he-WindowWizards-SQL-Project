@@ -164,3 +164,31 @@ ORDER BY
     region_name, sales_rank;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20%20Finding%20top%203%20best-selling%20products%20per%20region.png)
+
+```sql
+WITH earliest_transactions AS (
+    SELECT 
+        r.region_name,
+        p.product_name,
+        t.transaction_date,
+        t.total_amount,
+        ROW_NUMBER() OVER (PARTITION BY r.region_name ORDER BY t.transaction_date) AS date_rank
+    FROM 
+        transactions t
+    JOIN 
+        products p ON t.product_id = p.product_id
+    JOIN 
+        regions r ON t.region_id = r.region_id
+)
+SELECT 
+    region_name,
+    product_name,
+    transaction_date,
+    total_amount
+FROM 
+    earliest_transactions
+WHERE 
+    date_rank <= 2
+ORDER BY 
+    region_name, transaction_date;
+```
