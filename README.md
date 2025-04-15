@@ -87,4 +87,36 @@ INSERT INTO transactions (transaction_id, product_id, region_id, transaction_dat
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Inserting%20sample%20data%2CTransaction.png)
 
 ```
+### 1. Compare Values with Previous or Next Records (LAG/LEAD)
+
+**Query Purpose**: This query compares each transaction amount with the previous transaction chronologically, providing instant visibility into sales trends over time.
+
+**SQL Query:**
+```sql
+SELECT 
+    t.transaction_id,
+    p.product_name,
+    r.region_name,
+    t.transaction_date,
+    t.total_amount,
+    LAG(t.total_amount) OVER (ORDER BY t.transaction_date) AS previous_amount,
+    CASE 
+        WHEN t.total_amount > LAG(t.total_amount) OVER (ORDER BY t.transaction_date) THEN 'HIGHER'
+        WHEN t.total_amount < LAG(t.total_amount) OVER (ORDER BY t.transaction_date) THEN 'LOWER'
+        WHEN t.total_amount = LAG(t.total_amount) OVER (ORDER BY t.transaction_date) THEN 'EQUAL'
+        ELSE 'FIRST RECORD'
+    END AS comparison_with_previous,
+    LEAD(t.total_amount) OVER (ORDER BY t.transaction_date) AS next_amount
+FROM 
+    transactions t
+JOIN 
+    products p ON t.product_id = p.product_id
+JOIN 
+    regions r ON t.region_id = r.region_id
+ORDER BY 
+    t.transaction_date;
+```
+
+**Business Application**: Sales trend analysis to identify patterns, seasonality, and anomalies in purchasing behavior.
+
 ![Alt text](
