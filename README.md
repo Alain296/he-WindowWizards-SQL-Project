@@ -232,3 +232,4 @@ JOIN
 ORDER BY 
     r.region_name, t.total_amount DESC;
 ```
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Aggregation%20with%20Window%20Functions.png)
