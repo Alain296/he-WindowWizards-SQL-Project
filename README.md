@@ -56,6 +56,7 @@ INSERT INTO regions (region_id, region_name) VALUES (1, 'North America');
 INSERT INTO regions (region_id, region_name) VALUES (2, 'Europe');
 INSERT INTO regions (region_id, region_name) VALUES (3, 'Asia');
 INSERT INTO regions (region_id, region_name) VALUES (4, 'South America');
-INSERT INTO regions (region_id, region_name) VALUES (5, 'Africa');
-```
+INSERT INTO regions (region_id, region_name) VALUES (5, 'Africa);
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Inserting%20sample%20data%2CRegion.png)
+``
 
