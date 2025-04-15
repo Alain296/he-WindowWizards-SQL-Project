@@ -1,4 +1,4 @@
-# The-ASSIGNMENNT-SQL-Project 
+# The-WindowWizards-SQL-Project 
 ## Team Members
 - BYIRINGIRO BAILLY 26593
 - ALAIN MUGABO       26450
