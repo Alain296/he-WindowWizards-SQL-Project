@@ -129,3 +129,4 @@ GROUP BY
 ORDER BY 
     p.category, total_sales DESC;
 ```
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Ranking%20Data%20within%20a%20Category%20.png)
