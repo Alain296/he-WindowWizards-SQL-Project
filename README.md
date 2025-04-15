@@ -117,6 +117,5 @@ ORDER BY
     t.transaction_date;
 ```
 
-**Business Application**: Sales trend analysis to identify patterns, seasonality, and anomalies in purchasing behavior.
 
 ![Alt text](
