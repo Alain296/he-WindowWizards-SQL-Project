@@ -113,3 +113,19 @@ ORDER BY
     t.transaction_date;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20LAG()%20to%20compare%20current%20transaction%20amount%20with%20previous%20transaction%20.png)
+```sql
+SELECT 
+    p.category,
+    p.product_name,
+    SUM(t.total_amount) AS total_sales,
+    RANK() OVER (PARTITION BY p.category ORDER BY SUM(t.total_amount) DESC) AS sales_rank,
+    DENSE_RANK() OVER (PARTITION BY p.category ORDER BY SUM(t.total_amount) DESC) AS sales_dense_rank
+FROM 
+    transactions t
+JOIN 
+    products p ON t.product_id = p.product_id
+GROUP BY 
+    p.category, p.product_name
+ORDER BY 
+    p.category, total_sales DESC;
+```
