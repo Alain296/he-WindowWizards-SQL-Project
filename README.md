@@ -130,3 +130,36 @@ ORDER BY
     p.category, total_sales DESC;
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Ranking%20Data%20within%20a%20Category%20.png)
+
+### 3. Identifying Top Records
+
+**Query Purpose**: Identifies the top 3 best-selling products in each region.
+
+**SQL Query:**
+```sql
+WITH ranked_sales AS (
+    SELECT 
+        r.region_name,
+        p.product_name,
+        SUM(t.total_amount) AS total_sales,
+        DENSE_RANK() OVER (PARTITION BY r.region_name ORDER BY SUM(t.total_amount) DESC) AS sales_rank
+    FROM 
+        transactions t
+    JOIN 
+        products p ON t.product_id = p.product_id
+    JOIN 
+        regions r ON t.region_id = r.region_id
+    GROUP BY 
+        r.region_name, p.product_name
+)
+SELECT 
+    region_name,
+    product_name,
+    total_sales
+FROM 
+    ranked_sales
+WHERE 
+    sales_rank <= 3
+ORDER BY 
+    region_name, sales_rank;
+```
