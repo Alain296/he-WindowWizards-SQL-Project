@@ -86,12 +86,8 @@ INSERT INTO transactions (transaction_id, product_id, region_id, transaction_dat
 ```
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Inserting%20sample%20data%2CTransaction.png)
 
-```
-### 1. Compare Values with Previous or Next Records (LAG/LEAD)
+``
 
-**Query Purpose**: This query compares each transaction amount with the previous transaction chronologically, providing instant visibility into sales trends over time.
-
-**SQL Query:**
 ```sql
 SELECT 
     t.transaction_id,
