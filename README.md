@@ -59,4 +59,18 @@ INSERT INTO regions (region_id, region_name) VALUES (4, 'South America');
 INSERT INTO regions (region_id, region_name) VALUES (5, 'Africa);
 ![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20Inserting%20sample%20data%2CRegion.png)
 ``
+### Transactions Table
+This table records sales transactions including products sold, region, date, quantity, and amount.
 
+```sql
+-- Create Transactions table
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    product_id INT,
+    region_id INT,
+    transaction_date DATE,
+    quantity INT,
+    total_amount DECIMAL(12, 2),
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    FOREIGN KEY (region_id) REFERENCES regions(region_id)
+);
