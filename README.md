@@ -47,5 +47,5 @@ CREATE TABLE regions (
     region_id INT PRIMARY KEY,
     region_name VARCHAR(50)
 );
-![Alt text](image-url)
+![Alt text](https://github.com/Alain296/he-WindowWizards-SQL-Project/blob/main/Screenshot%20REGION%20table.png)
 
